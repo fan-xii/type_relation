@@ -2,4 +2,5 @@ node_modules/
 dist/
 userData/
 .claude/
+CLAUDE.md
 *.log
