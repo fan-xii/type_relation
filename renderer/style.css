@@ -530,13 +530,6 @@ body {
   background: linear-gradient(90deg, var(--gray), transparent);
 }
 
-.relation-block.immune {
-  border-left-color: var(--yellow);
-}
-.relation-block.immune::after {
-  background: linear-gradient(90deg, var(--yellow), transparent);
-}
-
 /* Relation Header */
 .relation-header {
   display: flex;
@@ -565,7 +558,6 @@ body {
 .weak-against .relation-title { color: var(--red); }
 .resisted .relation-title { color: var(--blue); }
 .resistant-to .relation-title { color: var(--gray); }
-.immune .relation-title { color: var(--yellow); }
 
 .relation-multiplier {
   font-size: 12px;

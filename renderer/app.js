@@ -194,14 +194,12 @@ function showDetail() {
   const weakAgainst = [];
   const resisted = [];
   const resistantTo = [];
-  const immune = [];
 
   TYPE_DATA.forEach(defType => {
     const asAttacker = getRelation(selectedTypeId, defType.id);
     const asDefender = getRelation(defType.id, selectedTypeId);
 
     if (asAttacker === 2) superEffective.push(defType);
-    if (asAttacker === 0) immune.push(defType);
     if (asAttacker === 0.5) resisted.push(defType);
     if (asDefender === 2) weakAgainst.push(defType);
     if (asDefender === 0.5) resistantTo.push(defType);
@@ -211,14 +209,6 @@ function showDetail() {
   renderRelationList('weak-against-list', weakAgainst);
   renderRelationList('resisted-list', resisted);
   renderRelationList('resistant-to-list', resistantTo);
-
-  const immuneBlock = document.getElementById('immune-block');
-  if (immune.length > 0) {
-    immuneBlock.style.display = '';
-    renderRelationList('immune-list', immune);
-  } else {
-    immuneBlock.style.display = 'none';
-  }
 
   // Re-trigger block animations
   document.querySelectorAll('.relation-block').forEach((block, i) => {
