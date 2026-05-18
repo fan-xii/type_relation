@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>洛克王国世界 - 属性克制查询</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="particles-canvas"></canvas>
+    <div class="arcane-bg"></div>
+    <div class="arcane-bg-overlay"></div>
+
+    <!-- Theme toggle — top right -->
+    <button id="theme-toggle" class="theme-toggle" title="切换主题">
+      <span class="toggle-icon">&#9790;</span>
+    </button>
+
+    <div id="main-container">
+      <section id="type-grid-section">
+        <div class="section-header">
+          <div class="header-decor left"></div>
+          <h2 class="section-title">元素图鉴</h2>
+          <div class="header-decor right"></div>
+        </div>
+        <div id="type-grid"></div>
+      </section>
+
+      <section id="detail-section">
+        <div id="empty-state">
+          <div class="empty-rune">&#10070;</div>
+          <div class="empty-circle"></div>
+          <h2>选择一种元素</h2>
+          <p>揭示其克制与被克制的奥秘</p>
+        </div>
+
+        <div id="detail-content" style="display:none;">
+          <div id="selected-info">
+            <div class="selected-glow"></div>
+            <span id="selected-type-badge" class="type-badge-large"></span>
+          </div>
+
+          <div id="relation-blocks">
+            <div class="relation-block super-effective">
+              <div class="relation-header">
+                <div class="relation-sigil">&#9876;</div>
+                <span class="relation-title">克制</span>
+                <span class="relation-multiplier">×2</span>
+              </div>
+              <div id="super-effective-list" class="relation-list"></div>
+            </div>
+
+            <div class="relation-block weak-against">
+              <div class="relation-header">
+                <div class="relation-sigil">&#9960;</div>
+                <span class="relation-title">被克制</span>
+                <span class="relation-multiplier">×2</span>
+              </div>
+              <div id="weak-against-list" class="relation-list"></div>
+            </div>
+
+            <div class="relation-block resisted">
+              <div class="relation-header">
+                <div class="relation-sigil">&#9660;</div>
+                <span class="relation-title">抵抗</span>
+                <span class="relation-multiplier">×0.5</span>
+              </div>
+              <div id="resisted-list" class="relation-list"></div>
+            </div>
+
+            <div class="relation-block resistant-to">
+              <div class="relation-header">
+                <div class="relation-sigil">&#9650;</div>
+                <span class="relation-title">被抵抗</span>
+                <span class="relation-multiplier">×0.5</span>
+              </div>
+              <div id="resistant-to-list" class="relation-list"></div>
+            </div>
+
+            <div class="relation-block immune" id="immune-block" style="display:none;">
+              <div class="relation-header">
+                <div class="relation-sigil">&#9746;</div>
+                <span class="relation-title">免疫</span>
+                <span class="relation-multiplier">×0</span>
+              </div>
+              <div id="immune-list" class="relation-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="typeData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
