@@ -2,7 +2,7 @@
 
 一个基于 Electron 的桌面应用，用于查询《洛克王国世界》中 18 种元素属性之间的克制关系。
 
-![应用截图](screenshot.png)
+<img src="screenshot.png" width="60%">
 
 ## 功能特性
 
