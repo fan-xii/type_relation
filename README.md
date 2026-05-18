@@ -2,6 +2,8 @@
 
 一个基于 Electron 的桌面应用，用于查询《洛克王国世界》中 18 种元素属性之间的克制关系。
 
+![应用截图](screenshot.png)
+
 ## 功能特性
 
 - **18 种元素属性**：普通、草、火、水、光、地、冰、龙、电、毒、虫、武、翼、萌、幽、恶、机械、幻
@@ -20,8 +22,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/fan-xii/type_relation.git
-cd type_relation
+git clone https://github.com/fan-xii/roco_type_relation.git
+cd roco_type_relation
 
 # 安装依赖
 npm install
